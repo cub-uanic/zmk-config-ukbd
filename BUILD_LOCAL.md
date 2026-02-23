@@ -29,18 +29,28 @@ This guide describes how to build your firmware using a local ZMK setup.
 From your workspace root (e.g., `zmk-workspace/`), run:
 
 ```bash
-west build -s zmk/app -b nice_nano_v2 -- -DZMK_CONFIG="[PATH_TO_YOUR_CONFIG_REPO]/config" -DSHIELD=kinesis_micro
+# Optimal local build command
+west build -s zmk/app -b nice_nano_v2 -- \
+  -DZMK_CONFIG="/Users/cub/projects/keyboard/zmk-config-ukbd/config" \
+  -DSHIELD=kinesis_micro
 ```
 
-*Replace `[PATH_TO_YOUR_CONFIG_REPO]` with the absolute path to your local `zmk-config-ukbd` directory.*
+> [!NOTE]
+> **Deprecation Warning**: You may see a warning about `config/boards` being deprecated. This is expected for now—it ensures your shield is found correctly while we maintain a simple configuration.
+
+> [!WARNING]
+> **Do NOT use `~` (tilde)**: CMake and Nano do not expand the tilde symbol correctly inside build arguments. Always use the full absolute path or `$HOME`.
+
+*Replace `/Users/cub/projects/keyboard/zmk-config-ukbd` with the actual path to your repository on your machine.*
 
 ## Flashing
 
-1.  The build output will be located at `build/zephyr/zmk.uf2`.
+1.  The build output will be located at `build/zephyr/zmk.uf2` (or inside the `zmk/app/build` directory if building from there).
 2.  Connect your keyboard and enter bootloader mode (double-tap reset).
 3.  Copy `zmk.uf2` to the NICENANO drive.
 
 ## Troubleshooting
+- **Path Issues**: If you see "Unable to locate ZMK config", check that the path in `-DZMK_CONFIG` is absolute and the folder contains a `west.yml`.
 - **Dirty Build**: If you encounter strange errors after changing configs, try a pristine build:
   ```bash
   west build -p -s zmk/app ...

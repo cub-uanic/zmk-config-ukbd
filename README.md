@@ -26,10 +26,10 @@ ZMK Studio support is currently disabled to keep the firmware lean. To enable it
     ```
 
 ## Project Structure
-- `config/`: Keymap and user-level configuration.
-- `boards/shields/kinesis_micro/`: Physical shield definition (matrix, pins).
+- `config/`: Your keymap, feature settings, and workspace metadata.
+- `boards/shields/kinesis_micro/`: Physical shield definition.
 - `build.yaml`: Build matrix for GitHub Actions.
-- `west.yml`: Metadata for the `west` workspace.
+- `config/west.yml`: Metadata for the `west` workspace.
 
 ## License
 MIT

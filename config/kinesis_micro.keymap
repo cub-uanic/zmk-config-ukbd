@@ -44,9 +44,9 @@
 #define mtrg            mt RGUI
 
 #if IS_ENABLED(CONFIG_ZMK_STUDIO)
-i#define _SYS_STUDIO_   &studio_unlock
+#define _SYS_STUDIO_   &studio_unlock
 #else
-i#define _SYS_STUDIO_   ___x___
+#define _SYS_STUDIO_   ___x___
 #endif
 
 
