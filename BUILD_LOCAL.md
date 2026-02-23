@@ -29,14 +29,15 @@ This guide describes how to build your firmware using a local ZMK setup.
 From your workspace root (e.g., `zmk-workspace/`), run:
 
 ```bash
-# Optimal local build command
+# Definitive Unified Template Build Command
 west build -s zmk/app -b nice_nano_v2 -- \
   -DZMK_CONFIG="/Users/cub/projects/keyboard/zmk-config-ukbd/config" \
+  -DZMK_EXTRA_MODULES="/Users/cub/projects/keyboard/zmk-config-ukbd" \
   -DSHIELD=kinesis_micro
 ```
 
-> [!NOTE]
-> **Deprecation Warning**: You may see a warning about `config/boards` being deprecated. This is expected for now—it ensures your shield is found correctly while we maintain a simple configuration.
+> [!IMPORTANT]
+> **Board Discovery Fixed**: We use `-DZMK_EXTRA_MODULES` instead of `ZEPHYR_EXTRA_MODULES`. This ensures that ZMK's internal board roots (including the `nice_nano_v2` board) are not overshadowed by the custom configuration module.
 
 > [!WARNING]
 > **Do NOT use `~` (tilde)**: CMake and Nano do not expand the tilde symbol correctly inside build arguments. Always use the full absolute path or `$HOME`.

@@ -28,6 +28,7 @@ ZMK Studio support is currently disabled to keep the firmware lean. To enable it
 ## Project Structure
 - `config/`: Your keymap, feature settings, and workspace metadata.
 - `boards/shields/kinesis_micro/`: Physical shield definition.
+- `zephyr/module.yml`: Registration for the repository as a ZMK module.
 - `build.yaml`: Build matrix for GitHub Actions.
 - `config/west.yml`: Metadata for the `west` workspace.
 
