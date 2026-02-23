@@ -24,11 +24,7 @@ ZMK Studio support is currently disabled to keep the firmware lean. To enable it
       - keys
       - studio
     ```
-3.  **Keymap (Optional but Recommended)**: In [config/kinesis_micro.keymap](config/kinesis_micro.keymap), find the `macro_layer` and uncomment the `&studio_unlock` behavior:
-    ```c
-    /* &studio_unlock */ ___x___  =>  &studio_unlock
-    ```
-    This allows secured access to Studio features from your keyboard.
+3.  **Keymap (Automated)**: You do **not** need to edit the keymap! I have added a conditional guard that automatically switches between `&studio_unlock` and a placeholder based on your `.conf` setting.
 
 ## Project Structure
 - `config/`: Keymap and user-level configuration.

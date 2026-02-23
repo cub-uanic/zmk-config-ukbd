@@ -274,8 +274,13 @@
                         bindings = <
    &m_passwd_1    ___x___        ___x___        ___x___        &sys_reset     NXT_LYR                   NXT_LYR        &kp C_MUTE     &kp C_VOL_DN   &kp C_VOL_UP   ___x___        &m_passwd_3
    &m_passwd_1    ___x___        ___x___        ___x___        &sys_reset     NXT_LYR                   NXT_LYR        &kp C_MUTE     &kp C_VOL_DN   &kp C_VOL_UP   ___x___        &m_passwd_3
-   &m_passwd_2    &out OUT_BLE   &out OUT_USB   &out OUT_TOG   ___x___        &sys_reset                &sys_reset     &kp C_PREV     &kp C_PP       &kp C_NEXT     ___x___        &m_passwd_4
-/* &m_passwd_2    &out OUT_BLE   &out OUT_USB   &out OUT_TOG   &studio_unlock &sys_reset                &sys_reset     &kp C_PREV     &kp C_PP       &kp C_NEXT     ___x___        &m_passwd_4 */
+   &m_passwd_2    &out OUT_BLE   &out OUT_USB   &out OUT_TOG 
+#if IS_ENABLED(CONFIG_ZMK_STUDIO)
+                  &studio_unlock
+#else
+                  ___x___
+#endif
+                  &sys_reset                &sys_reset     &kp C_PREV     &kp C_PP       &kp C_NEXT     ___x___        &m_passwd_4
    &bt BT_RESET   &bt BT_MBP20   &bt BT_MBP15   &bt BT_MINI    &bt BT_IMAC    &bt BT_WORK               &bt BT_RESET   &bt BT_MBP20   &bt BT_MBP15   &bt BT_MINI    &bt BT_IMAC    &bt BT_WORK
                   ___x___        ___x___        ___x___        ___x___                                                 ___x___        ___x___        ___x___        ___x___
                                                                _TRANS_        _TRANS_                   _TRANS_        _TRANS_
