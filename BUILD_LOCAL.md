@@ -123,8 +123,6 @@ The following settings are automatically configured in `boards/shields/kineziz_b
 - `CONFIG_ROM_START_OFFSET=0x10000` — skip the bootloader region
 - `CONFIG_BUILD_OUTPUT_UF2=y` — generate UF2 file
 - `CONFIG_BUILD_OUTPUT_UF2_FAMILY_ID="0x57755a57"` — STM32F4 UF2 family ID
-- `CONFIG_BUILD_OUTPUT_UF2_USE_FLASH_BASE=y` — include flash base in UF2 address
-- `CONFIG_BUILD_OUTPUT_UF2_USE_FLASH_OFFSET=y` — include ROM offset in UF2 address
 
 ## Troubleshooting
 - **Path Issues**: If you see "Unable to locate ZMK config", check that the path in `-DZMK_CONFIG` is absolute and the folder contains a `west.yml`.
