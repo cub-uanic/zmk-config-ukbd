@@ -23,13 +23,19 @@
     - [x] Update `README.md` and configuration files
 
 ## Phase 2: Kineziz Blackantage
-- [/] Implement `kineziz_adv` variant for Blackpill:
-    - **Shield Name**: `kineziz_adv`
+- [x] Implement `kineziz_adv` variant for Blackpill:
+    - **Shield Name**: `kineziz_black`
     - **Layout Logic**: Fixed matrix
     - **MCU**: `blackpill_f411ce`
     - **Features**: Wired
     - **Branding**: "Kineziz Black"
-    - [ ] Ask user for existing GPIO mapping and files
+    - [x] Ask user for existing GPIO mapping and files
+    - [x] Create board-specific shield in `boards/shields/kineziz_black/`
+    - [x] Create config-level files (`config/kineziz_black.keymap`, `config/kineziz_black.conf`)
+    - [x] Update `build.yaml` with the new target
+    - [x] Update `README.md` and `BUILD_LOCAL.md`
+    - [x] Remove old `kblack/` directory
+    - [ ] Verify build and functionality
 
 ## Phase 3: TBK Mini
 - [ ] Implement `tbkmini` support:

@@ -16,14 +16,31 @@ This repository is configured to build your ZMK firmware automatically using Git
 3.  **Download Firmware**:
     - Once the build is successful (green checkmark), scroll down to the **"Artifacts"** section at the bottom of the run page.
     - Download the `firmware.zip` (or the artifact named after your board/shield).
-    - Unzip the file to find `zmk.uf2`.
+    - Unzip to find the firmware file(s).
+
+## Build Matrix
+
+The following targets are built automatically (see `build.yaml`):
+
+| Target | Board | Shield | Output |
+|--------|-------|--------|--------|
+| Kineziz Advantage | `nice_nano_v2` | `kineziz_adv` | `zmk.uf2` |
+| Kineziz Black | `blackpill_f411ce` | `kineziz_black` | `zmk.uf2` + `zmk.bin` |
+| Settings Reset | `nice_nano_v2` | `settings_reset` | `zmk.uf2` |
 
 ## Flashing
 
-1.  **Connect Keyboard**: Plug in your keyboard to your computer via USB.
-2.  **Bootloader Mode**: Double-tap the reset button on your nice!nano (or your specific MCU) to enter bootloader mode. The keyboard will appear as a USB mass storage device (e.g., `NICENANO`).
-3.  **Copy File**: Drag and drop (or copy) the `zmk.uf2` file onto the USB drive.
-4.  **Wait**: The drive will automatically unmount once the flashing is complete. Your keyboard is now running the new firmware!
+### nice!nano v2 (Kineziz Adv)
+1.  Double-tap the reset button to enter bootloader mode.
+2.  Copy `zmk.uf2` onto the `NICENANO` USB drive.
+
+### Blackpill F411CE (Kineziz Black)
+1.  Double-tap the RESET button to enter UF2 bootloader mode.
+2.  Copy `zmk.uf2` onto the USB drive.
+
+> [!NOTE]
+> The BlackPill firmware requires the **WeAct UF2 bootloader** to be installed.
+> See [BUILD_LOCAL.md](BUILD_LOCAL.md) for detailed flashing instructions including DFU and manual UF2 conversion methods.
 
 ## Troubleshooting
 - If the build fails, click on the **"build"** job in the Actions run to see the logs. Error messages in the `West Build` step usually point to syntax errors in your `.keymap` or `.dtsi` files.

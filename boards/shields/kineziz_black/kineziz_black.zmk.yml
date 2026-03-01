@@ -1,0 +1,8 @@
+file_format: "1"
+id: kineziz_black
+name: Kineziz Blackantage
+type: shield
+url: https://github.com/joric/nrfmicro/wiki/
+requires: [blackpill]
+features:
+  - keys

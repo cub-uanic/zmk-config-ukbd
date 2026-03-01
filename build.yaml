@@ -2,5 +2,7 @@
 include:
   - board: nice_nano_v2
     shield: kineziz_adv
+  - board: blackpill_f411ce
+    shield: kineziz_black
   - board: nice_nano_v2
     shield: settings_reset

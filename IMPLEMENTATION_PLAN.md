@@ -32,10 +32,11 @@ This plan establishes a "Universal Layout" architecture where a single keymap fi
 - **MCU Support**: `blackpill_f411ce` (Wired)
 - **Branding**: "Kineziz Black"
 - **Technical Detail**:
-    - **Ask user for already-existing files (gpio mapping and others)**.
-    - Add `boards/blackpill_f411ce` directory with custom overlay/config.
-    - Ensure the matrix transform is reused from the shield.
-    - Target wired-only configuration (no BLE modules).
+    - [x] **Ask user for already-existing files (gpio mapping and others)**.
+    - Create `boards/blackpill_f411ce/blackpill_f411ce.overlay` defining the `kscan` using the mapping from `kinesiz_blackpill.dtsi`.
+    - Create `boards/blackpill_f411ce/blackpill_f411ce.conf` for the "Kineziz Black" name.
+    - Add `kineziz_adv_blackpill_f411ce` target to `build.yaml`.
+    - Re-use the universal shield `kineziz_adv` and keymap.
 
 ### Stage 3: TBK Mini
 - **Shield Name**: `tbkmini`

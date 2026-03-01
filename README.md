@@ -1,11 +1,18 @@
-# Kineziz Advantage ZMK Configuration
+# Kineziz Universal Keyboard Configuration
 
-This repository contains the ZMK firmware configuration for the **Kineziz Advantage** keyboard using a **nice!nano v2** controller.
+This repository contains the ZMK firmware configuration for multiple **Kineziz** keyboard variants using a **universal keymap** architecture.
+
+## Supported Keyboards
+| Variant | Shield | Board | Connection |
+|---------|--------|-------|------------|
+| Kineziz Advantage | `kineziz_adv` | `nice_nano_v2` | Wireless (BLE) |
+| Kineziz Black | `kineziz_black` | `blackpill_f411ce` | Wired (USB) |
 
 ## Features
+- **Universal Keymap**: Single `config/keyboard.keymap` shared across all variants.
 - **Custom Layout**: Optimized Workman for Programmers on Mac.
-- **Layers**: Support for Unconvenient keys, F-keys, Mouse, Numpad, Arrow, and Macros.
-- **Microcontroller**: nice!nano v2 (locked to ZMK v0.3.0).
+- **Layers**: Unconvenient keys, F-keys, Mouse, Numpad, Arrow, and Macros.
+- **Locked to ZMK v0.3.0**.
 
 ## Build and Flash
 - [BUILD_GITHUB.md](BUILD_GITHUB.md): Automated builds via GitHub Actions.
@@ -26,11 +33,13 @@ ZMK Studio support is currently disabled to keep the firmware lean. To enable it
     ```
 
 ## Project Structure
-- `config/`: Your keymap, feature settings, and workspace metadata.
-- `boards/shields/kineziz_adv/`: Physical shield definition.
-- `zephyr/module.yml`: Registration for the repository as a ZMK module.
+- `config/keyboard.keymap`: Universal keymap shared by all keyboards.
+- `config/<shield>.keymap`: Shield-specific keymap wrapper (includes universal keymap).
+- `config/<shield>.conf`: Shield-specific configuration.
+- `boards/shields/kineziz_adv/`: Shield definition for nice!nano v2 (Wireless).
+- `boards/shields/kineziz_black/`: Shield definition for Blackpill F411CE (Wired).
 - `build.yaml`: Build matrix for GitHub Actions.
-- `config/west.yml`: Metadata for the `west` workspace.
+- `zephyr/module.yml`: Registration for the repository as a ZMK module.
 
 ## License
 MIT
