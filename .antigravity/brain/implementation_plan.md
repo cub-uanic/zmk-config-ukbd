@@ -2,6 +2,10 @@
 
 This plan establishes a "Universal Layout" architecture where a single keymap file serves multiple keyboards with different or the same physical matrices and different MCUs. We will use ZMK's `matrix-transform` and `physical-layout` to map a shared logical keymap onto varying hardware.
 
+1. Always create a plan first
+2. Ask for confirmation before implementation
+3. Implement step-by-step
+
 ## User Review Required
 
 > [!IMPORTANT]

@@ -1,5 +1,10 @@
 # Task: Multi-Keyboard ZMK Firmware Expansion
 
+1. Always create a plan first
+2. Ask for confirmation before implementation
+3. Implement step-by-step
+
+
 ## Phase 0: Research & Planning
 - [ ] Study reference project in `/Users/cub/projects/keyboard/zmk/zmk-config-ukbd/`
 - [ ] Finalize Unified Implementation Plan
