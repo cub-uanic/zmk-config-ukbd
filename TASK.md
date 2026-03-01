@@ -7,25 +7,29 @@
 
 
 ## Phase 0: Research & Planning
-- [/] Study reference project in `/Users/cub/projects/keyboard/zmk/zmk-config-ukbd/`
-- [ ] Finalize Unified Implementation Plan
+- [x] Study reference project in `/Users/cub/projects/keyboard/zmk/zmk-config-ukbd/`
+- [x] Finalize Unified Implementation Plan
 
 ## Phase 1: Universal Keymap & Advantage Refactor
-- [ ] Establish `config/keyboard.keymap` as the core universal keymap.
-- [ ] Refactor `kinesis_micro` to `kineziz_adv`:
+- [x] Establish `config/keyboard.keymap` as the core universal keymap.
+- [x] Refactor `kinesis_micro` to `kineziz_adv`:
     - **Shield Name**: `kineziz_adv`
     - **Layout Logic**: Fixed matrix (Advantage style)
     - **MCU**: `nice_nano_v2`
     - **Features**: Wireless
-    - **Branding**: "ZMK Kinesis Advantage"
+    - **Branding**: "Kineziz Adv" (Shortened to fit BLE limit)
+    - [x] Update `BUILD_LOCAL.md` for new naming
+    - [x] Fix BLE device name length (max 16)
+    - [x] Update `README.md` and configuration files
 
 ## Phase 2: Kineziz Blackantage
-- [ ] Implement `kineziz_adv` variant for Blackpill:
+- [/] Implement `kineziz_adv` variant for Blackpill:
     - **Shield Name**: `kineziz_adv`
     - **Layout Logic**: Fixed matrix
-    - **MCU**: `smt32f411`
+    - **MCU**: `blackpill_f411ce`
     - **Features**: Wired
-    - **Branding**: "ZMK Kinesis Blackantage"
+    - **Branding**: "Kineziz Black"
+    - [ ] Ask user for existing GPIO mapping and files
 
 ## Phase 3: TBK Mini
 - [ ] Implement `tbkmini` support:

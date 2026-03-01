@@ -29,10 +29,13 @@ This plan establishes a "Universal Layout" architecture where a single keymap fi
 
 ### Stage 2: Kineziz Blackantage
 - **Shield Name**: `kineziz_adv`
-- **Layout Logic**: Fixed matrix
-- **MCU**: `smt32f411`
-- **Features**: Wired
-- **Branding**: "ZMK Kinesis Blackantage"
+- **MCU Support**: `blackpill_f411ce` (Wired)
+- **Branding**: "Kineziz Black"
+- **Technical Detail**:
+    - **Ask user for already-existing files (gpio mapping and others)**.
+    - Add `boards/blackpill_f411ce` directory with custom overlay/config.
+    - Ensure the matrix transform is reused from the shield.
+    - Target wired-only configuration (no BLE modules).
 
 ### Stage 3: TBK Mini
 - **Shield Name**: `tbkmini`
@@ -40,6 +43,8 @@ This plan establishes a "Universal Layout" architecture where a single keymap fi
 - **MCU**: `nice_nano_v2`
 - **Features**: Wireless split
 - **Branding**: "ZMK TBK Mini"
+- **Technical Detail**:
+    - **Ask user for already-existing files (gpio mapping and others)**.
 
 ### Stage 4: Cygnus 46
 - **Shield Name**: `cygnus_46`
@@ -47,6 +52,8 @@ This plan establishes a "Universal Layout" architecture where a single keymap fi
 - **MCU**: `rp2040_zero`
 - **Features**: Wired split
 - **Branding**: "ZMK Cygnus RPZ"
+- **Technical Detail**:
+    - **Ask user for already-existing files (gpio mapping and others)**.
 
 ### Stage 5: Charybdis RPi
 - **Shield Name**: `charybdis`
@@ -54,6 +61,8 @@ This plan establishes a "Universal Layout" architecture where a single keymap fi
 - **MCU**: `rp2040_promicro`
 - **Features**: Wired + Trackball
 - **Branding**: "ZMK Charybdis RPi"
+- **Technical Detail**:
+    - **Ask user for already-existing files (gpio mapping and others)**.
 
 ### Stage 6: Charybdis Wireless
 - **Shield Name**: `charybdis`
@@ -61,6 +70,8 @@ This plan establishes a "Universal Layout" architecture where a single keymap fi
 - **MCU**: `nice_nano_v2`
 - **Features**: Wireless split
 - **Branding**: "ZMK Charybdis"
+- **Technical Detail**:
+    - **Ask user for already-existing files (gpio mapping and others)**.
 
 ## Verification Plan
 
