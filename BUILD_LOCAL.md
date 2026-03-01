@@ -40,6 +40,17 @@ west build -p always -s zmk/app -b blackpill_f411ce -- \
   -DZMK_CONFIG="/Users/cub/projects/keyboard/zmk-config-ukbd/config" \
   -DZMK_EXTRA_MODULES="/Users/cub/projects/keyboard/zmk-config-ukbd" \
   -DSHIELD=kineziz_black
+
+# TBK Mini (nice!nano v2, Wireless Split)
+west build -p always -s zmk/app -b nice_nano_v2 -- \
+  -DZMK_CONFIG="/Users/cub/projects/keyboard/zmk-config-ukbd/config" \
+  -DZMK_EXTRA_MODULES="/Users/cub/projects/keyboard/zmk-config-ukbd" \
+  -DSHIELD=tbkmini_left
+
+west build -p always -s zmk/app -b nice_nano_v2 -- \
+  -DZMK_CONFIG="/Users/cub/projects/keyboard/zmk-config-ukbd/config" \
+  -DZMK_EXTRA_MODULES="/Users/cub/projects/keyboard/zmk-config-ukbd" \
+  -DSHIELD=tbkmini_right
 ```
 
 > [!IMPORTANT]

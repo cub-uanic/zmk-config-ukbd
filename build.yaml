@@ -5,4 +5,8 @@ include:
   - board: blackpill_f411ce
     shield: kineziz_black
   - board: nice_nano_v2
+    shield: tbkmini_left
+  - board: nice_nano_v2
+    shield: tbkmini_right
+  - board: nice_nano_v2
     shield: settings_reset

@@ -1,0 +1,13 @@
+---
+file_format: "1"
+id: tbkmini
+name: TBK Mini
+type: shield
+url: ""
+requires: [pro_micro]
+exposes: []
+siblings:
+  - tbkmini_left
+  - tbkmini_right
+features:
+  - keys
