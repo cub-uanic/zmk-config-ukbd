@@ -1,6 +1,6 @@
-# Kinesis Micro ZMK Configuration
+# Kineziz Advantage ZMK Configuration
 
-This repository contains the ZMK firmware configuration for the **Kinesis Micro** keyboard using a **nice!nano v2** controller.
+This repository contains the ZMK firmware configuration for the **Kineziz Advantage** keyboard using a **nice!nano v2** controller.
 
 ## Features
 - **Custom Layout**: Optimized Workman for Programmers on Mac.
@@ -14,11 +14,11 @@ This repository contains the ZMK firmware configuration for the **Kinesis Micro*
 ## How to Enable ZMK Studio
 ZMK Studio support is currently disabled to keep the firmware lean. To enable it:
 
-1.  **Configuration**: In [config/kinesis_micro.conf](config/kinesis_micro.conf), uncomment the following line:
+1.  **Configuration**: In [config/kineziz_adv.conf](config/kineziz_adv.conf), uncomment the following line:
     ```kconfig
     CONFIG_ZMK_STUDIO=y
     ```
-2.  **Metadata**: In [boards/shields/kinesis_micro/kinesis_micro.zmk.yml](boards/shields/kinesis_micro/kinesis_micro.zmk.yml), uncomment the `studio` feature:
+2.  **Metadata**: In [boards/shields/kineziz_adv/kineziz_adv.zmk.yml](boards/shields/kineziz_adv/kineziz_adv.zmk.yml), uncomment the `studio` feature:
     ```yaml
     features:
       - keys
@@ -27,7 +27,7 @@ ZMK Studio support is currently disabled to keep the firmware lean. To enable it
 
 ## Project Structure
 - `config/`: Your keymap, feature settings, and workspace metadata.
-- `boards/shields/kinesis_micro/`: Physical shield definition.
+- `boards/shields/kineziz_adv/`: Physical shield definition.
 - `zephyr/module.yml`: Registration for the repository as a ZMK module.
 - `build.yaml`: Build matrix for GitHub Actions.
 - `config/west.yml`: Metadata for the `west` workspace.

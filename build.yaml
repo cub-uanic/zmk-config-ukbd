@@ -1,6 +1,6 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: kinesis_micro
+    shield: kineziz_adv
   - board: nice_nano_v2
     shield: settings_reset

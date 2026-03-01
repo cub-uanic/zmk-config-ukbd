@@ -1,7 +1,7 @@
-if SHIELD_KINESIS_MICRO
+if SHIELD_KINEZIZ_ADV
 
 config ZMK_KEYBOARD_NAME
-    default "Kinesis Micro"
+    default "Kineziz Adv"
 
 if LVGL
 

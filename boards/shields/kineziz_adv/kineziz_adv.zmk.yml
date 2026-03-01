@@ -1,6 +1,6 @@
 file_format: "1"
-id:  kinesis_micro
-name: Kinesis Micro
+id: kineziz_adv
+name: Kineziz Advantage
 type: shield
 url: https://github.com/joric/nrfmicro/wiki/
 requires: [pro_micro]

@@ -33,7 +33,7 @@ From your workspace root (e.g., `zmk-workspace/`), run:
 west build -s zmk/app -b nice_nano_v2 -- \
   -DZMK_CONFIG="/Users/cub/projects/keyboard/zmk-config-ukbd/config" \
   -DZMK_EXTRA_MODULES="/Users/cub/projects/keyboard/zmk-config-ukbd" \
-  -DSHIELD=kinesis_micro
+  -DSHIELD=kineziz_adv
 ```
 
 > [!IMPORTANT]

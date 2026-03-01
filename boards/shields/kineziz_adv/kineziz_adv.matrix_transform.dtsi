@@ -5,18 +5,8 @@
  */
 
 #include <dt-bindings/zmk/matrix_transform.h>
-#include "columns.dtsi"
-
-&kinesis_micro_layout {
-    transform = <&default_transform>;
-};
 
 / {
-    chosen {
-        zmk,kscan = &kscan0;
-        zmk,physical-layout = &kinesis_micro_layout;
-    };
-
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
         rows = <7>;
@@ -32,24 +22,4 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)            RC(3,6) RC(3,7) RC(3,
                         RC(6,3) RC(6,4) RC(5,2)            RC(6,6) RC(5,7) RC(5,6)
         >;
     };
-
-    kscan0: kscan {
-        compatible = "zmk,kscan-gpio-matrix";
-        wakeup-source;
-
-        diode-direction = "row2col";
-        row-gpios
-            = <&pro_micro 18 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 10 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 16 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 20 GPIO_ACTIVE_HIGH>
-            , <&gpio1     7  GPIO_ACTIVE_HIGH>
-            , <&pro_micro 19 GPIO_ACTIVE_HIGH>
-            , <&pro_micro 4  GPIO_ACTIVE_HIGH>
-            ;
-    };
-};
-
-&pro_micro_i2c {
-    status = "okay";
 };
