@@ -1,6 +1,0 @@
-/ {
-    layouts_kineziz_adv_position_map: layouts_kineziz_adv_position_map {
-        compatible = "zmk,physical-layout-position-map";
-        complete;
-    };
-};
