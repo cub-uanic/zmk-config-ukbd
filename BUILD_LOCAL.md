@@ -141,7 +141,7 @@ If your BlackPill F411CE doesn't have the UF2 bootloader:
 > [!IMPORTANT]
 > **ROM Offset**: The WeAct UF2 bootloader occupies the first 64KB of flash. `CONFIG_ROM_START_OFFSET=0x10000` is set in the shield config to ensure the firmware binary starts after the bootloader.
 
-The following settings are automatically configured in `boards/shields/kineziz_black/kineziz_black.conf`:
+The following settings are automatically configured in `boards/shields/kineziz_black/kineziz.dtsi` (unified inline structure):
 - `CONFIG_ROM_START_OFFSET=0x10000` — skip the bootloader region
 - `CONFIG_BUILD_OUTPUT_UF2=y` — generate UF2 file
 - `CONFIG_BUILD_OUTPUT_UF2_FAMILY_ID="0x57755a57"` — STM32F4 UF2 family ID

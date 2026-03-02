@@ -36,8 +36,10 @@ ZMK Studio support is currently disabled to keep the firmware lean. To enable it
 - `config/keyboard.keymap`: Universal keymap shared by all keyboards.
 - `config/<shield>.keymap`: Shield-specific keymap wrapper (includes universal keymap).
 - `config/<shield>.conf`: Shield-specific configuration.
-- `boards/shields/kineziz_adv/`: Shield definition for nice!nano v2 (Wireless).
-- `boards/shields/kineziz_black/`: Shield definition for Blackpill F411CE (Wired).
+- `boards/shields/kineziz_adv/`: Wireless Kinesis Advantage (nice!nano v2).
+- `boards/shields/kineziz_black/`: Wired Kinesis Advantage (Blackpill F411CE).
+- `boards/shields/tbkmini_5col/`: Wireless TBK Mini (5-Column variant).
+- `boards/shields/tbkmini_6col/`: Wireless TBK Mini (6-Column variant).
 - `build.yaml`: Build matrix for GitHub Actions.
 - `zephyr/module.yml`: Registration for the repository as a ZMK module.
 
