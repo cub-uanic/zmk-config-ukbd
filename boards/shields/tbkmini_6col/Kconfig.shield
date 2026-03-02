@@ -6,9 +6,3 @@ config SHIELD_TBKMINI_6COL_LEFT
 
 config SHIELD_TBKMINI_6COL_RIGHT
     def_bool $(shields_list_contains,tbkmini_6col_right)
-
-config SHIELD_TBKMINI_5COL_LEFT
-    def_bool $(shields_list_contains,tbkmini_5col_left)
-
-config SHIELD_TBKMINI_5COL_RIGHT
-    def_bool $(shields_list_contains,tbkmini_5col_right)
