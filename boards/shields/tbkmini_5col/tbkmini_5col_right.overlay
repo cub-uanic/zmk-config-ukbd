@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "tbkmini_5col.dtsi"
+#include "tbkmini.dtsi"
 
 &tbkmini_5col_transform {
     col-offset = <5>;
