@@ -1,13 +1,13 @@
 ---
 file_format: "1"
-id: tbkmini
-name: TBK Mini
+id: tbkmini_5col
+name: TBK Mini (5 Column)
 type: shield
 url: ""
 requires: [pro_micro]
 exposes: []
 siblings:
-  - tbkmini_left
-  - tbkmini_right
+  - tbkmini_5col_left
+  - tbkmini_5col_right
 features:
   - keys

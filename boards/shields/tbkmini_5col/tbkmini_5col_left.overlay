@@ -4,13 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "tbkmini.dtsi"
-
-/ {
-    chosen {
-        zmk,physical-layout = &tbkmini_5col_layout;
-    };
-};
+#include "tbkmini_5col.dtsi"
 
 &kscan0 {
     col-gpios
